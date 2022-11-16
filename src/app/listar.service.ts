@@ -9,7 +9,7 @@ import { Responses } from './responses.model';
 })
 export class ListarService {
 
-  URL = "http://localhost/estudiantes/";
+  URL = "http://localhost/api-crud-angular-14/";
 
   constructor(private http: HttpClient) { }
 
