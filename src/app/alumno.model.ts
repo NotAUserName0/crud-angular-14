@@ -6,6 +6,6 @@ export class Alumno {
 
     public constructor(init? : Partial<Alumno>){
         Object.assign(this,init);
-        
+        //Modificado asi es
     }
 }
