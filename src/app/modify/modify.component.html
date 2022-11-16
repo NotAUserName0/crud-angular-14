@@ -1,10 +1,12 @@
 <form action="submit" class="container-fluid">
-    <h2>Selecciona que estudiante quieres modificar</h2>
-  <div>
-    <span class="del">
-      <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-      <input type="text" class="form-control" id="exampleFormControlInput1" value="Mike" disabled/>
-      <a href=""><i class="material-icons">mode</i></a>
-    </span>
-  </div>
+  <h2>Selecciona que estudiante quieres modificar</h2>
+<div>
+  <h2 class="error" style="display: none;" #err>-- Sin datos :( --</h2>
+  <span class="del">
+    <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" value="Mike" disabled/>
+    <button type="button" (click)="displayHelp()"><i class="material-icons">mode</i></button>
+  </span>
+  <div style="display: none;" #help><app-mod-help></app-mod-help></div>
+</div>
 </form>
