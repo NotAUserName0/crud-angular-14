@@ -1,0 +1,30 @@
+
+.del{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+input{
+    width: 600px;
+}
+
+label{
+    margin-right: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+i{
+    margin-left: 10px;
+}
+
+a{
+    color: black;
+}
+
+h2{
+    text-align: center;
+    margin: 20px;
+}

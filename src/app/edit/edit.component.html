@@ -1,0 +1,9 @@
+<app-header [type] = "type"></app-header>
+<h1 class="title">Editar estudiantes</h1>
+
+<div class="editions">
+    <a [routerLink]="['modify']" class="btn btn-outline-primary me-4" >Modify</a>
+    <a [routerLink]="['delete']" class="btn btn-outline-primary" active>Delete</a>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,17 @@
+<app-header [type] = "type"></app-header>
+<h1 class="title">Añadir alumnos</h1>
+
+<form [formGroup]="addAlumno" (ngSubmit)="saveAlumno()">
+    <div class="forms">
+        <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="nombre">
+
+        <label for="exampleFormControlInput1" class="form-label">Grupo</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="grupo">
+    
+        <label for="exampleFormControlInput1" class="form-label">Grado</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="grado">
+
+        <button type="submit" class="btn btn-primary mb-3"> Enviar</button>
+    </div>
+</form>

@@ -1,0 +1,27 @@
+<app-header [type] = "type"></app-header> <!-- como enviar argumento por componente ? -->
+<h1 class="title">Lista de Alumnos</h1>
+
+<h2 class="error" style="display: none;" #err>-- Sin datos :( --</h2>
+
+<table class="table" #tab>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Grupo</th>
+        <th scope="col">Grado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let a of alumno">
+        <th scope="row">{{a.id}}</th>
+        <td>{{a.nombre}}</td>
+        <td>{{a.grupo}}</td>
+        <td>{{a.grado}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+<router-outlet></router-outlet>
