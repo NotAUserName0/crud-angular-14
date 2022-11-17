@@ -1,5 +1,5 @@
 .del{
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
@@ -15,10 +15,6 @@ label{
     margin-bottom: auto;
 }
 
-i{
-    margin-left: 10px;
-}
-
 a{
     color: black;
 }
@@ -31,3 +27,19 @@ h2{
 button{
     all: unset;
 }
+
+.table{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+li{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+

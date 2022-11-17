@@ -3,10 +3,16 @@
   <h2 class="error" style="display: none" #err>-- Sin datos :( --</h2>
   <div *ngFor="let a of alumno">
     <span class="del">
-      <p>{{a.nombre}}</p>
-      <button (click)="a.show = !a.show" type="button"><i class="material-icons">mode</i></button>
-    </span>
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item">{{a.nombre}}</li>
+      <li class="list-group-item">
+        <button (click)="a.show = !a.show" type="button">
+          <i class="material-icons">mode</i>
+        </button>
+      </li>
+    </ul>
     <div *ngIf="!a.show; else elseBlock"></div>
     <ng-template #elseBlock><app-mod-help></app-mod-help></ng-template>
+  </span>
   </div>
 </form>
