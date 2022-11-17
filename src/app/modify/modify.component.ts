@@ -9,24 +9,27 @@ import { ListarService } from '../listar.service';
 })
 export class ModifyComponent implements OnInit {
 
-  @ViewChild('help')help:ElementRef;
+  
 
   alumno : Alumno[];
   res : number;
+  show : boolean = true;
 
   @ViewChild('err')err:ElementRef; //referencia a objeto del html
-  @ViewChild('tab')tab:ElementRef;
+  @ViewChild('help')help:ElementRef;
 
   constructor(private listarService : ListarService) { 
     
   }
 
   ngOnInit(): void {
+    this.obternerAlumnos();
   }
 
-  displayHelp(){
-    console.log("entro nya");
-    this.help.nativeElement.style.display = 'block';
+
+
+  state(){
+    this.show = false;
   }
 
   obternerAlumnos(){
@@ -37,10 +40,9 @@ export class ModifyComponent implements OnInit {
           this.alumno = respuesta;
         }else{
           this.err.nativeElement.style.display = 'block';
-          this.tab.nativeElement.style.display = 'none';
         }
       }
-    )
+    );
   }
 
   

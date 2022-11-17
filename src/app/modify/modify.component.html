@@ -1,12 +1,13 @@
 <form action="submit" class="container-fluid">
   <h2>Selecciona que estudiante quieres modificar</h2>
-<div>
-  <h2 class="error" style="display: none;" #err>-- Sin datos :( --</h2>
-  <span class="del">
-    <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" value="Mike" disabled/>
-    <button type="button" (click)="displayHelp()"><i class="material-icons">mode</i></button>
-  </span>
-  <div style="display: none;" #help><app-mod-help></app-mod-help></div>
-</div>
+  <h2 class="error" style="display: none" #err>-- Sin datos :( --</h2>
+  <div *ngFor="let a of alumno">
+    <span class="del">
+      <p>{{a.nombre}}</p>
+      <button (click)="state()" type="button"><i class="material-icons">mode</i></button>
+    </span>
+    <div *ngIf="show; else elseBlock"></div>
+    <ng-template #elseBlock><app-mod-help></app-mod-help></ng-template>
+    {{show = true}}
+  </div>
 </form>
