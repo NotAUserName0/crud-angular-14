@@ -4,9 +4,9 @@
   <div *ngFor="let a of alumno">
     <span class="del">
       <p>{{a.nombre}}</p>
-      <button (click)="state()" type="button"><i class="material-icons">mode</i></button>
+      <button (click)="a.show = !a.show" type="button"><i class="material-icons">mode</i></button>
     </span>
-    <div *ngIf="show; else elseBlock"></div>
+    <div *ngIf="!a.show; else elseBlock"></div>
     <ng-template #elseBlock><app-mod-help></app-mod-help></ng-template>
   </div>
 </form>
