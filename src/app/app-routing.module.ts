@@ -16,10 +16,7 @@ const routes: Routes = [
   {path:'edit',component:EditComponent,
   children: [
     {path: 'delete',component: DeleteComponent},
-    {path: 'modify', component: ModifyComponent,
-        children: [
-          {path: 'help', component: ModHelpComponent}
-        ]}
+    {path: 'modify', component: ModifyComponent}
   ]},
   {path:'**',component:PageNotFoundComponent}
 

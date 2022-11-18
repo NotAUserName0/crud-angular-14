@@ -9,8 +9,6 @@ import { ListarService } from '../listar.service';
 })
 export class ModifyComponent implements OnInit {
 
-  
-
   alumno : Alumno[];
   res : number;
   show : boolean;
@@ -18,9 +16,7 @@ export class ModifyComponent implements OnInit {
   @ViewChild('err')err:ElementRef; //referencia a objeto del html
   @ViewChild('help')help:ElementRef;
 
-  constructor(private listarService : ListarService) { 
-    
-  }
+  constructor(private listarService : ListarService) { }
 
   ngOnInit(): void {
     this.obternerAlumnos();
@@ -39,7 +35,4 @@ export class ModifyComponent implements OnInit {
       }
     );
   }
-
-  
-
 }

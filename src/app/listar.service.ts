@@ -20,4 +20,8 @@ export class ListarService {
   agregarAlumnos(alumno:any):Observable<Responses>{
     return this.http.post<Responses>(`${this.URL}agregar.php`,alumno);
   }
+
+  modificarAlumnos(alumno:any):Observable<Responses>{
+    return this.http.post<Responses>(`${this.URL}modificar.php`,alumno);
+  }
 }

@@ -28,13 +28,11 @@ export class AddComponent implements OnInit {
   }
 
   saveAlumno(){
-    //console.log(JSON.stringify(this.addAlumno.value));
+    console.log(JSON.stringify(this.addAlumno.value));
     
-    this.listService.agregarAlumnos(JSON.stringify(this.addAlumno.value)).subscribe(
+/*    this.listService.agregarAlumnos(JSON.stringify(this.addAlumno.value)).subscribe(
       respuesta => {
         this.resp = respuesta;
-        //console.log(this.resp);
-        //console.log(this.resp.res);
         if(this.resp.res == 'Exito!'){
           if(confirm("Estado de la solicitud: "+this.resp.res)){
             this.router.navigate(['']); //redireccion
@@ -44,7 +42,7 @@ export class AddComponent implements OnInit {
         }
         
       }
-    );
+    );*/
   }
 
 }
