@@ -28,9 +28,9 @@ export class AddComponent implements OnInit {
   }
 
   saveAlumno(){
-    console.log(JSON.stringify(this.addAlumno.value));
+    //console.log(JSON.stringify(this.addAlumno.value));
     
-/*    this.listService.agregarAlumnos(JSON.stringify(this.addAlumno.value)).subscribe(
+    this.listService.agregarAlumnos(JSON.stringify(this.addAlumno.value)).subscribe(
       respuesta => {
         this.resp = respuesta;
         if(this.resp.res == 'Exito!'){
@@ -42,7 +42,7 @@ export class AddComponent implements OnInit {
         }
         
       }
-    );*/
+    );
   }
 
 }

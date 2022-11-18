@@ -1,5 +1,5 @@
-<form>
-    <div class="forms" [formGroup]="modAlumno" (ngSubmit)="modiAlumno()">
+<form action="submit" [formGroup]="modAlumno" (ngSubmit)="modiAlumno()">
+    <div class="forms" >
         <label for="exampleFormControlInput1" class="form-label">Nombre</label>
         <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="nombre">
 

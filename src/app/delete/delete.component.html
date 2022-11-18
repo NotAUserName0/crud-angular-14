@@ -1,10 +1,16 @@
-<form action="submit" class="container-fluid">
+<div class="container-fluid">
     <h2>Selecciona que estudiante quieres borrar</h2>
   <div>
-    <span class="del">
-      <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-      <input type="text" class="form-control" id="exampleFormControlInput1" value="Mike" disabled/>
-      <a href=""><i class="material-icons">close</i></a>
+    <span class="del" *ngFor="let a of alumno">
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item">{{a.nombre}}</li>
+        <li class="list-group-item">
+          <button type="button" (click) = "eliminarAlumno(a.id)">
+            <i class="material-icons">close</i>
+          </button>
+        </li>
+      </ul>
+      
     </span>
   </div>
-</form>
+</div>

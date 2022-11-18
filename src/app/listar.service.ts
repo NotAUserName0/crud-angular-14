@@ -22,6 +22,13 @@ export class ListarService {
   }
 
   modificarAlumnos(alumno:any):Observable<Responses>{
-    return this.http.post<Responses>(`${this.URL}modificar.php`,alumno);
+    return this.http.put<Responses>(`${this.URL}editar.php`,alumno);
   }
+
+  eliminarAlumnos(id:string):Observable<Responses>{
+    console.log(id);
+    return this.http.delete<Responses>(`${this.URL}eliminar.php?id=${id}`);
+  }
+
+
 }

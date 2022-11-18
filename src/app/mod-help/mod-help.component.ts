@@ -23,11 +23,27 @@ export class ModHelpComponent implements OnInit {
     this.modAlumno = new FormGroup({
       nombre : new FormControl( this.alumno.nombre ),
       grupo : new FormControl( this.alumno.grupo ),
-      grado : new FormControl( this.alumno.grado )
+      grado : new FormControl( this.alumno.grado ),
+      id : new FormControl( this.alumno.id )
   });
   }
 
   modiAlumno(){
-    console.log(JSON.stringify(this.modAlumno.value));
+
+    //return console.log(JSON.stringify(this.modAlumno.value));
+
+    this.listService.modificarAlumnos(JSON.stringify(this.modAlumno.value)).subscribe(
+      respuesta => {
+        this.resp = respuesta;
+        if(this.resp.res == 'Exito!'){
+          if(confirm("Estado de la solicitud: "+this.resp.res)){
+            this.router.navigate(['']); //redireccion
+          }
+        }else{
+          confirm("Error del lado del servidor!");
+        }
+        
+      }
+    );
   }
 }
