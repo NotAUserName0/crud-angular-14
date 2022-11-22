@@ -18,6 +18,7 @@ export class ListarService {
   }
 
   agregarAlumnos(alumno:any):Observable<Responses>{
+    console.log(alumno);
     return this.http.post<Responses>(`${this.URL}agregar.php`,alumno);
   }
 
